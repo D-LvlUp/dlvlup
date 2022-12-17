@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "extends": "@dlvlup/tsconfig/base.json",
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules","dist"]
+}

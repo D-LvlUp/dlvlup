@@ -1,0 +1,23 @@
+{
+  "name": "@dlvlup/data",
+  "version": "1.0.2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint './**' --fix"
+  },
+  "dependencies": {
+    "@dlvlup/core": "1.0.1",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.11"
+  },
+  "devDependencies": {
+    "@dlvlup/tsconfig": "1.0.2"
+  }
+}

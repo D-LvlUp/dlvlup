@@ -1,7 +1,7 @@
 {
-  "name": "tsconfig",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@dlvlup/tsconfig",
+  "version": "1.0.2",
+  "public": true,
   "files": [
     "base.json",
     "nextjs.json",

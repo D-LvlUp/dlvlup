@@ -1,0 +1,39 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "amd": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "object-curly-spacing": ["error", "always"],
+    "space-infix-ops": "error",
+    "no-unused-vars": "off",
+    "no-prototype-builtins": "off",
+    "indent": ["error", "tab"],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  },
+  "ignorePatterns": [
+    "*.json",
+    "node_modules",
+    "coverage",
+    "*.lock",
+    ".gitignore",
+    "*.md",
+    "*.log",
+    "*.test.*",
+    "*.txt",
+    "*.pem",
+    "*.config.*",
+    "dist",
+    "*.d.ts.map",
+    "*.d.ts"
+  ]
+}
