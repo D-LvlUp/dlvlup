@@ -23,7 +23,7 @@ jobs:
         run: yarn
 
       - name: 🔍lint
-        run: turbo run lint
+        run: yarn lint
         working-directory: .
 
       - name: 📦build
