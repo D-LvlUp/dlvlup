@@ -31,7 +31,5 @@ jobs:
       - name: 🚀publish
         run: yarn run publish
         working-directory: .
-        with:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
