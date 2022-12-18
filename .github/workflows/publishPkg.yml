@@ -19,6 +19,9 @@ jobs:
           node-version: latest
           registry-url: https://registry.npmjs.org/
 
+      - name: 🔧install dependencies
+        run: yarn
+
       - name: 🔍lint
         run: yarn lint
         working-directory: .
@@ -28,6 +31,6 @@ jobs:
         working-directory: .
 
       - name: 🚀publish
-        run: yarn run publish
+        run: yarn publish-pkg
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
