@@ -1,6 +1,7 @@
 {
   "name": "@dlvlup/data",
   "version": "1.0.3",
+  "public": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [

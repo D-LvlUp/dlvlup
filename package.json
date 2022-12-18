@@ -1,7 +1,7 @@
 {
   "name": "dlvlup",
   "version": "0.0.0",
-  "private": true,
+  "public": true,
   "workspaces": [
     "apps/*",
     "packages/*"
