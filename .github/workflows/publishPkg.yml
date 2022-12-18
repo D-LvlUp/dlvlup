@@ -27,10 +27,10 @@ jobs:
         working-directory: .
 
       - name: 📦build
-        run: turbo run build
+        run: yarn build
         working-directory: .
 
       - name: 🚀publish
-        run: turbo run publish
+        run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
