@@ -19,9 +19,6 @@ jobs:
           node-version: latest
           registry-url: https://registry.npmjs.org/
 
-      - name: 🔧install dependencies
-        run: yarn
-
       - name: 🔍lint
         run: yarn lint
         working-directory: .
