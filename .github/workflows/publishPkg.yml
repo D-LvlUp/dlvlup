@@ -19,8 +19,6 @@ jobs:
           node-version: latest
       - name: 🔧install dependencies
         run: yarn
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: 🔍lint
         run: yarn lint
@@ -29,6 +27,9 @@ jobs:
       - name: 📦build
         run: yarn build
         working-directory: .
+
+      - name: test
+        run: echo ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: 🚀publish
         run: yarn run publish
