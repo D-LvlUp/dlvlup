@@ -20,17 +20,18 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: 🔧install dependencies
-        run: npm
+        run: yarn
 
       - name: 🔍lint
-        run: npm lint
+        run: yarn lint
         working-directory: .
 
       - name: 📦build
-        run: npm build
+        run: yarn build
         working-directory: .
 
       - name: 🚀publish
-        run: npm publish-pkg
+        run: yarn publish-pkg
+        working-directory: ./packages/core
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
