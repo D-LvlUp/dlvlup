@@ -38,6 +38,7 @@ jobs:
           publish: yarn release
         env:
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.NPM_GITHUB }}
 
 #      - name: 🚀publish core
 #        run: npm publish --access public
