@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "publish-pkg": "turbo run publish-pkg",
+    "release": "changeset publish",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
@@ -23,6 +23,8 @@
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@changesets/cli": "^2.25.2"
+  },
   "packageManager": "yarn@1.22.19"
 }

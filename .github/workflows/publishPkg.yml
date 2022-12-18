@@ -30,23 +30,32 @@ jobs:
         run: yarn build
         working-directory: .
 
-      - name: 🚀publish core
-        run: npm publish --access public
-        working-directory: ./packages/core
-        continue-on-error: true
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          # This expects you to have a script called release which does a build for your packages and calls changeset publish
+          publish: yarn release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
-      - name: 🚀publish data
-        run: npm publish --access public
-        working-directory: ./packages/data
-        continue-on-error: true
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-
-      - name: 🚀publish tsconfig
-        run: npm publish --access public
-        working-directory: ./packages/tsconfig
-        continue-on-error: true
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+#      - name: 🚀publish core
+#        run: npm publish --access public
+#        working-directory: ./packages/core
+#        continue-on-error: true
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+#
+#      - name: 🚀publish data
+#        run: npm publish --access public
+#        working-directory: ./packages/data
+#        continue-on-error: true
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+#
+#      - name: 🚀publish tsconfig
+#        run: npm publish --access public
+#        working-directory: ./packages/tsconfig
+#        continue-on-error: true
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

@@ -1,6 +1,6 @@
 {
   "name": "@dlvlup/data",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "public": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,16 +10,15 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "lint": "eslint './**' --fix",
-    "publish-pkg": "npm publish --access public ."
+    "lint": "eslint './**' --fix"
   },
   "dependencies": {
-    "@dlvlup/core": "1.0.1",
+    "@dlvlup/core": "1.0.3",
     "mysql": "^2.18.1",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.3.11"
   },
   "devDependencies": {
-    "@dlvlup/tsconfig": "1.0.2"
+    "@dlvlup/tsconfig": "1.1.2"
   }
 }

@@ -8,8 +8,6 @@
     "lint": {
       "outputs": []
     },
-    "publish-pkg": {
-    },
     "dev": {
       "cache": false
     }
