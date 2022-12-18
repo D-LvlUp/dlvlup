@@ -11,7 +11,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint './**' --fix",
-    "publish": "npm publish --access public ."
+    "publish-pkg": "npm publish --access public ."
   },
   "dependencies": {
     "@dlvlup/core": "1.0.1",

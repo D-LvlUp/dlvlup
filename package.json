@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "publish": "turbo run publish",
+    "publish-pkg": "turbo run publish-pkg",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
