@@ -37,7 +37,7 @@ jobs:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: yarn release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
 #      - name: 🚀publish core
 #        run: npm publish --access public
