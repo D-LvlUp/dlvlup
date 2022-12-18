@@ -30,11 +30,20 @@ jobs:
         run: yarn build
         working-directory: .
 
-      - name: 🚀publish
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_AUTH_TOKEN }}
-#        run: yarn publish-pkg
-#        working-directory: ./packages/core
-#        env:
-#          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+      - name: 🚀publish core
+        run: npm publish --access public
+        working-directory: ./packages/core
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+      - name: 🚀publish data
+        run: npm publish --access public
+        working-directory: ./packages/data
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+
+      - name: 🚀publish tsconfig
+        run: npm publish --access public
+        working-directory: ./packages/tsconfig
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
