@@ -31,7 +31,6 @@ jobs:
         working-directory: .
 
       - name: 🚀publish
-        run: npm publish --access public
-        working-directory: ./packages/tsconfig
+        run: yarn run publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
