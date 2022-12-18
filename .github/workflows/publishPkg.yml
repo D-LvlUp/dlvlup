@@ -32,7 +32,6 @@ jobs:
 
       - name: 🚀publish
         uses: JS-DevTools/npm-publish@v1
-        working-directory: ./packages/core
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
 #        run: yarn publish-pkg
