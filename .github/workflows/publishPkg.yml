@@ -1,0 +1,28 @@
+name: "🚀 Publish Packages"
+
+on:
+    push:
+      - main
+
+jobs:
+  release:
+    name: 🚀Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📚checkout
+        uses: actions/checkout@v2.1.1
+
+      - name: 🤖node
+        uses: actions/setup-node@v1.4.2
+        with:
+          node-version: 19
+          registry-url: https://registry.npmjs.org
+
+      - name: 📦build
+        run: turbo run build
+        working-directory: .
+
+      - name: 🚀publish
+        run: turbo run publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

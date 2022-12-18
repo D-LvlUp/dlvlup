@@ -1,6 +1,6 @@
 {
   "name": "@dlvlup/core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -9,7 +9,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "lint": "eslint './**' --fix"
+    "lint": "eslint './**' --fix",
+    "publish": "npm publish --access public ."
   },
   "dependencies": {
     "@types/express": "^4.17.14",
