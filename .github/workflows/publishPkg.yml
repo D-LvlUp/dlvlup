@@ -18,6 +18,10 @@ jobs:
           node-version: 19
           registry-url: https://registry.npmjs.org
 
+      - name: 🔍lint
+        run: turbo run lint
+        working-directory: .
+
       - name: 📦build
         run: turbo run build
         working-directory: .
