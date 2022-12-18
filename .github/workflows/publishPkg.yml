@@ -19,6 +19,8 @@ jobs:
           node-version: latest
       - name: 🔧install dependencies
         run: yarn
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: 🔍lint
         run: yarn lint
