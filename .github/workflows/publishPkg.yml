@@ -17,20 +17,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: latest
-          registry-url: https://npm.pkg.github.com
+          registry-url: https://registry.npmjs.org
 
       - name: 🔧install dependencies
-        run: yarn
+        run: npm
 
       - name: 🔍lint
-        run: yarn lint
+        run: npm lint
         working-directory: .
 
       - name: 📦build
-        run: yarn build
+        run: npm build
         working-directory: .
 
       - name: 🚀publish
-        run: yarn publish-pkg
+        run: npm publish-pkg
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_GITHUB }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
