@@ -2,7 +2,8 @@ name: "🚀 Publish Packages"
 
 on:
     push:
-      - main
+      branches:
+        - main
 
 jobs:
   release:
