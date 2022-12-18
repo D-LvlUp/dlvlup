@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 📚checkout
-        uses: actions/checkout@latest
+        uses: actions/checkout@v2.6.0
 
       - name: 🤖node
-        uses: actions/setup-node@latest
+        uses: actions/setup-node@v3
         with:
           node-version: latest
           registry-url: https://registry.npmjs.org
