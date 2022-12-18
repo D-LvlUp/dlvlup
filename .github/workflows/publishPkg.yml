@@ -31,7 +31,11 @@ jobs:
         working-directory: .
 
       - name: 🚀publish
-        run: yarn publish-pkg
+        uses: JS-DevTools/npm-publish@v1
         working-directory: ./packages/core
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        with:
+          token: ${{ secrets.NPM_AUTH_TOKEN }}
+#        run: yarn publish-pkg
+#        working-directory: ./packages/core
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
