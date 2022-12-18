@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: latest
+          registry-url: https://registry.npmjs.org/
+
       - name: 🔧install dependencies
         run: yarn
 
@@ -27,9 +29,6 @@ jobs:
       - name: 📦build
         run: yarn build
         working-directory: .
-
-      - name: test
-        run: echo ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: 🚀publish
         run: npm publish --access public
