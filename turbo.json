@@ -9,7 +9,6 @@
       "outputs": []
     },
     "publish": {
-      "dependsOn": ["build","lint"]
     },
     "dev": {
       "cache": false
