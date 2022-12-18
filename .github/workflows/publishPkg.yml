@@ -33,17 +33,20 @@ jobs:
       - name: 🚀publish core
         run: npm publish --access public
         working-directory: ./packages/core
+        continue-on-error: true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: 🚀publish data
         run: npm publish --access public
         working-directory: ./packages/data
+        continue-on-error: true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
       - name: 🚀publish tsconfig
         run: npm publish --access public
         working-directory: ./packages/tsconfig
+        continue-on-error: true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
