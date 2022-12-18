@@ -32,7 +32,7 @@ jobs:
         run: echo ${{secrets.NPM_AUTH_TOKEN}}
 
       - name: 🚀publish
-        run: yarn run publish
-        working-directory: .
+        run: npm publish --access public
+        working-directory: ./packages/tsconfig
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
