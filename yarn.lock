@@ -229,21 +229,6 @@
     human-id "^1.0.2"
     prettier "^2.7.1"
 
-"@dlvlup/core@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@dlvlup/core/-/core-1.0.1.tgz"
-  integrity sha512-6vzkdk1It/UsR9fVG3uFr95ic2/L210Q0pwAkorNfcXKR9t4St5RKyg6O3CBcebLgTH4SbbqRuyuUxdJcclwxw==
-  dependencies:
-    "@types/express" "^4.17.14"
-    class-transformer "^0.5.1"
-    class-validator "^0.14.0"
-    reflect-metadata "^0.1.13"
-
-"@dlvlup/tsconfig@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/@dlvlup/tsconfig/-/tsconfig-1.0.2.tgz"
-  integrity sha512-j8xCstA7fDHuCy28ERYK62C3e4axMyGJAukRFdsefcBdZZ0wYovZoid8HI6zMKmLVpIhs91S5vXH8kJtlvzXgw==
-
 "@eslint/eslintrc@^1.3.3":
   version "1.3.3"
   resolved "https://registry.npmjs.org/@eslint/eslintrc/-/eslintrc-1.3.3.tgz"
